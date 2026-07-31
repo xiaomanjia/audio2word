@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>音频转文字 — 本地 AI 语音转文字工具</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#FAFBFC;color:#1a1a2e;line-height:1.7}
+.hero{background:linear-gradient(135deg,#4F46E5,#7C3AED,#DB2777);padding:100px 20px 80px;text-align:center;color:#fff}
+.hero h1{font-size:42px;font-weight:800;letter-spacing:-1px;margin-bottom:12px}
+.hero p{font-size:18px;opacity:.9;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+.hero .download{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;font-size:17px;font-weight:700;background:#fff;color:#4F46E5;border-radius:100px;text-decoration:none;transition:.2s;box-shadow:0 8px 30px rgba(0,0,0,.2)}
+.hero .download:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.hero .version{font-size:13px;opacity:.6;margin-top:12px}
+.section{padding:80px 20px;max-width:960px;margin:0 auto}
+.section h2{text-align:center;font-size:30px;font-weight:700;margin-bottom:14px}
+.section .desc{text-align:center;color:#6b7280;margin-bottom:50px;font-size:15px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.feature{background:#fff;border-radius:16px;padding:32px 24px;text-align:center;border:1px solid #E5E7EB;transition:.2s}
+.feature:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.08)}
+.feature .icon{font-size:40px;margin-bottom:14px}
+.feature h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.feature p{font-size:14px;color:#6b7280}
+.steps{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;counter-reset:step}
+.step{flex:1;min-width:180px;max-width:220px;background:#fff;border-radius:16px;padding:28px 20px;text-align:center;position:relative;border:1px solid #E5E7EB}
+.step .num{width:36px;height:36px;background:linear-gradient(135deg,#4F46E5,#7C3AED);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;margin:0 auto 14px}
+.step h4{font-size:15px;font-weight:700;margin-bottom:6px}
+.step p{font-size:13px;color:#6b7280}
+.pricing{max-width:360px;margin:0 auto}
+.price-card{background:#fff;border-radius:20px;padding:40px;text-align:center;border:2px solid #4F46E5;box-shadow:0 8px 30px rgba(79,70,229,.1)}
+.price-card .price{font-size:48px;font-weight:800;color:#4F46E5;margin:16px 0}
+.price-card .price span{font-size:16px;font-weight:400;color:#6b7280}
+.price-card ul{list-style:none;margin:24px 0;text-align:left}
+.price-card li{padding:8px 0;font-size:14px;color:#6b7280}
+.price-card li::before{content:"✅ ";margin-right:6px}
+.footer{text-align:center;padding:40px 20px;color:#9CA3AF;font-size:13px;border-top:1px solid #E5E7EB}
+.footer a{color:#4F46E5;text-decoration:none}
+@media(max-width:640px){.hero h1{font-size:28px}.hero{padding:60px 16px 50px}.section{padding:50px 16px}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>🎤 音频转文字</h1>
+  <p>本地 AI 语音识别，一键导出字幕和文档<br>无需联网 · 隐私安全 · macOS 原生体验</p>
+  <a class="download" href="#">⬇ 下载 macOS 版（76MB）</a>
+  <p class="version">支持 Apple Silicon / Intel · macOS 11.0+</p>
+</div>
+
+<div class="section">
+  <h2>✨ 功能亮点</h2>
+  <p class="desc">为视频创作者和内容制作者打造的本地化工具</p>
+  <div class="features">
+    <div class="feature">
+      <div class="icon">🔒</div>
+      <h3>完全本地运行</h3>
+      <p>基于 faster-whisper，所有数据不上传、不联网，保护你的隐私</p>
+    </div>
+    <div class="feature">
+      <div class="icon">🎬</div>
+      <h3>FCPX 深度集成</h3>
+      <p>一键导出 FCPX 字幕文件，时间戳自动对齐，直接导入 Final Cut Pro</p>
+    </div>
+    <div class="feature">
+      <div class="icon">✏️</div>
+      <h3>在线编辑校对</h3>
+      <p>转录结果可直接点击编辑，同步播放音频，改错字更方便</p>
+    </div>
+    <div class="feature">
+      <div class="icon">📄</div>
+      <h3>多格式导出</h3>
+      <p>支持导出 Word 文档和 FCPXML 字幕，满足不同场景需求</p>
+    </div>
+    <div class="feature">
+      <div class="icon">🌐</div>
+      <h3>多语言支持</h3>
+      <p>自动检测中/英/日/韩等语言，繁转简自动处理</p>
+    </div>
+    <div class="feature">
+      <div class="icon">⚡</div>
+      <h3>原生 Mac 体验</h3>
+      <p>Swift 原生窗口，启动快、界面流畅，真正的 macOS 桌面应用</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="background:#fff;border-radius:24px;margin:0 20px 80px;max-width:960px">
+  <h2>📋 使用流程</h2>
+  <p class="desc">四步完成视频字幕制作</p>
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h4>导入音频</h4>
+      <p>拖入音频文件或从 FCPX 一键导出</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h4>AI 转录</h4>
+      <p>本地模型自动识别，几分钟完成</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h4>编辑校对</h4>
+      <p>点击文字直接修改，同步播放音频</p>
+    </div>
+    <div class="step">
+      <div class="num">4</div>
+      <h4>导出使用</h4>
+      <p>导出 Word 或 FCPX 字幕文件</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>💰 获取方式</h2>
+  <p class="desc">一次性购买，永久使用，不限设备</p>
+  <div class="pricing">
+    <div class="price-card">
+      <h3>音频转文字</h3>
+      <div class="price">¥XX<span>/永久</span></div>
+      <ul>
+        <li>本地 AI 语音转文字</li>
+        <li>编辑校对 + 音频同步播放</li>
+        <li>导出 Word / FCPX 字幕</li>
+        <li>FCPX 一键导出集成</li>
+        <li>一机一码 · 永久使用</li>
+        <li>免费更新</li>
+      </ul>
+      <a class="download" href="#" style="display:block;text-align:center;background:linear-gradient(135deg,#4F46E5,#7C3AED);color:#fff">获取激活码</a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>© 2026 音频转文字 · 基于 faster-whisper 构建</p>
+  <p style="margin-top:4px">macOS 11.0+ · Apple Silicon & Intel</p>
+</div>
+
+</body>
+</html>
